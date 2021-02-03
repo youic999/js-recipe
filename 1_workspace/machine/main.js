@@ -1,0 +1,1 @@
+const add100 = document.getElementById("add100")
