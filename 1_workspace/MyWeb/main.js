@@ -9,7 +9,7 @@ display.textContent = 0
 pushLike.onclick = function(){
   like = like+1
   display.textContent = like
-  if(like==100){
+  if(like===100){
     motherName.textContent="谷淳子"
   }
   if(like===10){
