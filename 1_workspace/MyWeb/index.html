@@ -7,11 +7,24 @@
     <link rel="stylesheet" href="stylesheet.css" />
   </head>
   <body>
-    <button id="like">いいね</button>
-    <div id="display"></div>
-    <div>
-      <div id="name">名前</div>
-      <div id="mother">お母さんの名前</div>
+    <div class="container">
+      <h2>いいね数：<span id="display"></span></h2>
+      <div id="name" class="pro">
+        <button id="name-button" class="p">開放</button>名前：10消費
+      </div>
+      <div id="univ" class="pro">
+        <button id="univ-button" class="p">開放</button>大学・学部：15消費
+      </div>
+      <div id="circle" class="pro">
+        <button id="circle-button" class="p">開放</button>サークル：15消費
+      </div>
+      <div id="hob" class="pro">
+        <button id="hob-button" class="p">開放</button>趣味：20消費
+      </div>
+    </div>
+
+    <div class="container2">
+      <button id="like" class="btn">いいね</button>
     </div>
     <script src="main.js"></script>
   </body>
