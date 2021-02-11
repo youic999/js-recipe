@@ -8,18 +8,23 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div id="quiz-container">
-      <h2 id="quiz-text"></h2>
-      <img id="quiz-image" />
+    <div id="quiz">
+      <h2 id="quiz-text">{{quizes[quizNumber].text}}</h2>
+      <img id="quiz-image" v-bind:src="quizes[quizNumber].image" />
       <div id="choices-container">
-        <button id="choice-1"></button>
-        <button id="choice-2"></button>
-        <button id="choice-3"></button>
+        <button
+          v-for="(choice, index) in quizes[quizNumber].choices"
+          v-on:click="choose(index)"
+        >
+          {{choice.text}}
+        </button>
       </div>
-      <div id="feedback"></div>
-      <button id="next-quiz">次の問題へ</button>
+      <div id="feedback">{{message}}</div>
+      <button id="next-quiz" v-bind:class="whatClass" v-on:click="nextQuiz">
+        次の問題へ
+      </button>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="./main.js"></script>
   </body>
 </html>
